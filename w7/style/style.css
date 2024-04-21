@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  max-width: 50rem;
+  margin-inline: auto;
+  background-color: oklch(90% 0 0);
+  padding-inline: 40px;
+}
+
+.container > div {
+  padding: 1rem;
+}
+
+.container > div:nth-child(1) {
+  background-color: oklch(90% 0.05 0);
+  border: 0.0625rem dotted oklch(40% 0.05 0);
+  color: oklch(20% 0.05 0);
+}
+
+.container > div:nth-child(2) {
+  background-color: oklch(90% 0.05 40);
+  border: 0.0625rem dotted oklch(40% 0.05 40);
+  color: oklch(20% 0.05 0);
+}
+
+.container > div:nth-child(3) {
+  background-color: oklch(90% 0.05 80);
+  border: 0.0625rem dotted oklch(40% 0.05 80);
+  color: oklch(20% 0.05 0);
+}
+
+.container > div:nth-child(4) {
+  background-color: oklch(90% 0.05 120);
+  border: 0.0625rem dotted oklch(40% 0.05 120);
+  color: oklch(20% 0.05 0);
+}
+
+.container > div:nth-child(5) {
+  background-color: oklch(90% 0.05 160);
+  border: 0.0625rem dotted oklch(40% 0.05 160);
+  color: oklch(20% 0.05 0);
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child-opt-1 {
+  flex-grow: 1;
+}
+
+/*
+.flex-container > * {
+  flex-grow: 1; 
+} 를 사용하면 flex-container아래에 있는 모든 것들에 적용이 된다. 우리는 차이를 알아보려고 안썻지만 이것도 하나의 방법이 될 수 있다.
+*/
+
+.flex-child-opt-2 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.flex-container-opt-1 {
+  /* gap: 16px; */
+  row-gap: 24px; /*세로를 의미한다.*/
+  column-gap: 16px; /*가로를 의미한다. */
+}
+
+.flex-container-opt-2 {
+  /* justify-content: left; */
+  /* justify-content: right; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  justify-content: space-around;
+}
+
+.flex-container-opt-3 {
+  /* align-items: end; */
+  /* align-items: stretch; */
+  /* align-items: center; */
+  align-items: start;
+}
+.flex-container-opt-4 {
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-opt-4 > * {
+  width: 7.5rem;
+}
+
+.flex-wrap {
+  /* flex-wrap: nowrap; 줄바꿈하다.*/
+  flex-wrap: wrap;
+  /* flex-wrap: nowrap; */
+}
+
+.flex-wrap-opt-1 {
+  column-gap: 0.75rem;
+  row-gap: 1.5rem;
+}
+.flex-wrap-opt-1 > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 12.5rem;
+}
