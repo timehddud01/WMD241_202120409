@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.navigation {
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding-inline: 1.875rem;
+  padding-block: 1.1875rem;
+
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-group {
+    display: flex;
+    align-items: center;
+    &--left {
+      gap: 0.8125rem;
+    }
+    &--right {
+      gap: 1rem;
+      @media (width < 900px) {
+        //화면 너비를 통제할 수 있다.줄였을 떄 메뉴가 사라지도록 한다.
+        & {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    height: 32px;
+    aspect-ratio: 200 / 51; // 비례를 맞춰준다(가로, 세로 하나만 설정한 후)
+  }
+  &__page-title {
+    //margin-top: 0.1875rem; 교수님은 추가했다.
+    padding-top: 0.1875rem;
+    padding-left: 0.8125rem;
+    line-height: 1.4375rem;
+    border-left: 0.125rem solid#fff;
+  }
+
+  &__btn {
+    padding-inline: 1.4375rem;
+    padding-block: 0.4375rem;
+    line-height: 2.25rem;
+    border-radius: 0.5rem;
+    &--outline {
+      border: 1px solid #fff;
+      background-color: #191a1b;
+    }
+    &--fill {
+      background-color: #515fcb;
+    }
+  }
+
+  // @media (width < 900px) {
+  //   //조건 뷰포트가 900보다 작으면~ 화면 너비를 통제할 수 있다.줄였을 떄 메뉴가 사라지도록 한다.
+  //   .navigation {
+  //     &__menu-group {
+  //       &--right {
+  //         display: none;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+.hero {
+  background-color: #dadbee;
+  padding-inline: 1.875rem;
+  padding-block: 5rem 7.25rem;
+
+  &__container {
+    margin-inline: auto;
+    width: 90%;
+  }
+  &__text {
+    font-size: 5rem;
+    line-height: 7.5rem;
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+  }
+  &__search-input {
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    padding: 16px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 24px;
+    line-height: 32px;
+    margin-inline: auto;
+    display: block;
+  }
+}
+
+.feature {
+  padding: 30px;
+  &__container {
+    column-gap: 24px;
+    row-gap: 48px;
+    width: 80%;
+    margin-inline: auto;
+    padding-left: 0;
+    list-style: none;
+    margin-block: 0;
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      flex-basis: 0; //균등하게 사이즈를 넣기 위해서는 무조건 들어가야함 자신의 체구와 상관없이 균등하게 들어감
+      flex-grow: 1; // 너 커지지 마
+
+      //메모: 이따 제대로 된 사이즈 확정할 것
+      min-width: 400px; // 화면 크기에 따라 변하게
+    }
+  }
+}
+
+.card {
+  display: flex;
+  gap: 30px;
+  padding-top: 48px;
+  &__area {
+    &__left {
+    }
+    &__right {
+    }
+  }
+  &__img {
+    max-width: 80px;
+  }
+  &__title {
+  }
+  &__desc {
+  }
+  &__more {
+  }
+}
