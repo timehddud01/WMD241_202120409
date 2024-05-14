@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: oklch(0.2 0 0);
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+.container {
+  display: grid;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: 200px repeat(auto-fit, minmax(240px, 1fr));
+
+  max-width: 1280px;
+  padding: 0.75rem;
+  background-color: oklch(0.5 0 0);
+  margin-inline: auto;
+}
+
+.sidebar {
+  grid-column: 1; //자리 지정 comlumn번째자리  row번쨰 줄
+  grid-row: 1 / -1; // mdn reference 참고 span은 칸의 개념이라 추천
+  background-color: #fff;
+  padding: 0.75rem;
+}
+
+.card-collection {
+  row-gap: 1.5rem;
+  display: grid;
+  grid-column: 2 /-1;
+  grid-row: 1 / -1;
+  grid-template-columns: subgrid; //부모의 그리드를 가져오게 된다(repeat부터 가져온다) 17번째 줄의
+  grid-auto-rows: subgrid;
+}
+
+.title {
+  grid-column: 1 /-1; // -를 사용하면 끝에서부터 시작할 수 있으므로 칸 수가 정해지지 않았을 때 사용하기 좋으므로 추천
+}
+//과제- 동영상참고 포트폴리오 사이트 만들어보기
+//다음주까지 stark 사이트 만들어오기 위 메뉴 바는 flex 사용, 중앙 칸은 꼭 grid사용하기 바텀도 그리드 사용  화면창 크기에 따라 줄넘김 도 구현

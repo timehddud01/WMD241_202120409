@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Armin_Grotesk";
+  src: url(../Fonts/Fontspring-DEMO-armingrotesk-black.otf) format("opentype");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Armin_Grotesk", sans-serif;
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.navigation {
+  font-size: 14px;
+  line-height: 20px;
+  background-color: rgb(246, 246, 235);
+  color: rgb(56, 31, 209);
+  padding-inline: 1rem;
+  padding-block: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    align-items: center;
+  }
+  &__menu-group {
+    align-items: center;
+    display: flex;
+    &--right {
+      display: flex;
+      align-items: center;
+    }
+    &--left {
+      align-items: center;
+    }
+    &--btn {
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+      @media (width<850px) {
+        display: none;
+      }
+    }
+  }
+}

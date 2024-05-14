@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.section {
+  padding-block: 1.5rem;
+}
+.section > h2 {
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-inline: 24px;
+  margin-bottom: 12px;
+}
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: 24px;
+  background-color: oklch(0.95 0.01 240);
+}
+
+.grid {
+  //그리드는 부모한테 주는 속성이다. 가로 세로 모두 가능하다.
+  display: grid;
+
+  &__item {
+    &--nth {
+      @for $i from 1 through 12 {
+        &-#{$i} {
+          background-color: oklch(0.9 0.05 $i * 30);
+        }
+      }
+    }
+  }
+
+  &--opt-1 {
+    //그리드에서 쓰는 단위 fr: 비례를 뜻함-비율을 지키면서 사이즈가 조절된다
+    grid-template-columns: 1fr 1fr 1fr; //가로
+    //grid-template-rows: 1fr 1fr 1fr 1fr; //세로
+
+    grid-template-rows: 4fr; //template은 모두 설정해줘야함
+    grid-auto-rows: 1fr; //그리드느 칸 안 크기를 벗어내면 담지 못하기 떄문- 큰것 기준으로 맞추고 앞으로 이렇개 할 거라고 선언해주는 것굳이 명시하지 않아도 자동으로 해줌
+    column-gap: 0.75rem;
+    row-gap: 1.5rem;
+  }
+
+  &--opt-2 {
+    column-gap: 0.75rem;
+    row-gap: 1.5rem;
+    //grid-template-columns: repeat(3, 1fr); //몇 번, 얼마를 반복할지
+    //grid-template-columns: 200px repeat(2, 1fr); //첫칸만 200으로 함
+    //grid-template-columns: repeat(3,minmax(100px, 1fr)); //최솟값, 최대값을 넣어준다.최소값은 명시적으로, 최대값은 비례를 사용하는 것이 좋다.
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+  }
+}
