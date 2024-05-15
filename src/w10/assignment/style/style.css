@@ -170,14 +170,14 @@ body {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   max-width: 1250px;
   background-color: #fff;
   margin-inline: auto;
 }
 
 .card-collection {
-  row-gap: 1rem;
+  row-gap: 1.5rem;
   display: grid;
   grid-column: 2/-1;
   grid-row: 2/-1;
@@ -230,7 +230,7 @@ body {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
 }
 
 .bottom_info {

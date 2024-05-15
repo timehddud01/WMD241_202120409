@@ -22,7 +22,7 @@
   line-height: 150%;
   padding: 24px;
   background-color: oklch(1 0 0);
-  border: 1px solid oklch(0.5 0 0);
+  border: 1px solid rgb(229, 229, 230);
   border-radius: 0.75rem;
 }
 .section--opt-pos-rel .card {

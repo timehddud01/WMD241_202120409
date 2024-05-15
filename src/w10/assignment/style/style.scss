@@ -180,7 +180,7 @@ body {
   padding-top: 64px;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   max-width: 1250px;
 
   background-color: #fff;
@@ -188,7 +188,7 @@ body {
 }
 .card-collection {
   //margin-left: 35px; //임시
-  row-gap: 1rem;
+  row-gap: 1.5rem;
   display: grid;
   grid-column: 2/-1;
   grid-row: 2/-1;
@@ -237,7 +237,7 @@ body {
   padding-top: 80px;
   column-gap: 1.5rem;
   row-gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
 }
 
 .bottom_info {
