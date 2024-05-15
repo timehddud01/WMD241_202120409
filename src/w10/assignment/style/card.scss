@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Armin_Grotesk";
+  src: url(../Fonts/Fontspring-DEMO-armingrotesk-black.otf) format("opentype");
+}
+@font-face {
+  font-family: "Armin_Grotesk_regular";
+  src: url(../Fonts/Fontspring-DEMO-armingrotesk-regular.otf) format("opentype");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --card-m-y: 1rem;
+  --card-m-x: 1.5rem;
+}
+
+.card {
+  font-family: "Armin_Grotesk_regular", sans-serif;
+  width: 261px;
+  height: 235px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 24px;
+  background-color: oklch(1 0 0);
+  border: 1px solid oklch(0.5 0 0);
+  border-radius: 0.75rem;
+  .section--opt-pos-rel & {
+    position: relative;
+    &:nth-child(1) {
+      left: 1rem;
+    }
+    &:nth-child(2) {
+      left: 2rem;
+      top: -10rem;
+    }
+    &:nth-child(3) {
+      left: 3rem;
+      top: -20rem;
+    }
+    &:nth-child(4) {
+      left: 4rem;
+      top: -30rem;
+    }
+    &:nth-child(5) {
+      left: 5rem;
+      top: -40rem;
+    }
+    &:nth-child(6) {
+      left: 6rem;
+      top: -50rem;
+    }
+  }
+}
+
+.card2 {
+  font-family: "Armin_Grotesk_regular", sans-serif;
+  width: 261px;
+  height: 342px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  // padding: 32px;
+  background-color: oklch(1 0 0);
+  border: 1px solid oklch(0.5 0 0);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-color {
+  &:nth-child(3) {
+    background-color: aqua;
+  }
+  &:nth-child(4) {
+    background-color: aqua;
+  }
+  &:nth-child(5) {
+    background-color: aqua;
+  }
+}
+
+.card_top {
+  margin: 0;
+  padding: 0;
+}
+.card_title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(56, 31, 209);
+}
+
+.card_subtitle {
+  // padding: 32px;
+  color: rgb(16, 40, 75);
+  font-family: "Armin_Grotesk";
+  font-size: 24px;
+}
+
+.card_subtitle2 {
+  padding: 32px;
+  color: rgb(16, 40, 75);
+  font-family: "Armin_Grotesk";
+  font-size: 24px;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+}
+
+.bottom {
+  height: 730px;
+  margin-top: 96px;
+  padding-inline: 24px;
+  background-color: rgb(16, 40, 75);
+}

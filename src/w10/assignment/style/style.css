@@ -2,6 +2,10 @@
   font-family: "Armin_Grotesk";
   src: url(../Fonts/Fontspring-DEMO-armingrotesk-black.otf) format("opentype");
 }
+@font-face {
+  font-family: "Armin_Grotesk_regular";
+  src: url(../Fonts/Fontspring-DEMO-armingrotesk-regular.otf) format("opentype");
+}
 *,
 *::after,
 *::before {
@@ -9,44 +13,175 @@
 }
 
 body {
-  font-family: "Armin_Grotesk", sans-serif;
+  font-family: "Armin_Grotesk", "Armin_Grotesk_regular", sans-serif;
   margin: 0;
   font-size: 24px;
   line-height: 30px;
 }
 
+.section {
+  margin-inline: auto;
+}
+
 .navigation {
+  justify-content: space-between;
   font-size: 14px;
   line-height: 20px;
   background-color: rgb(246, 246, 235);
   color: rgb(56, 31, 209);
   padding-inline: 1rem;
   padding-block: 1rem;
+  display: flex;
 }
 .navigation__container {
-  display: flex;
-  justify-content: space-between;
+  max-width: 90%;
   margin-inline: auto;
-  align-items: center;
+  display: flex;
 }
 .navigation__menu-group {
-  align-items: center;
   display: flex;
-}
-.navigation__menu-group--right {
-  display: flex;
-  align-items: center;
-}
-.navigation__menu-group--left {
   align-items: center;
 }
 .navigation__menu-group--btn {
-  gap: 1rem;
+  display: flex;
+  gap: 16px;
+}
+.navigation__menu-group--left {
+  display: flex;
+  gap: 16px;
+}
+@media (width < 850px) {
+  .navigation__menu-group--left {
+    display: none;
+  }
+}
+.navigation__menu-group--right {
+  display: flex;
+  gap: 16px;
+}
+
+.gap {
+  margin-left: 109px;
+}
+
+.btn2 {
+  padding-inline: 20px;
+}
+
+.sidebar {
+  grid-column: 1;
+  grid-row: 1/-1;
+  background-color: #fff;
+  font-family: "Armin_Grotesk_regular";
+  font-size: 16px;
+  font-weight: 500px;
+  border-radius: 0.75rem;
+}
+.sidebar__search {
+  margin-bottom: 14px;
+}
+.sidebar__search-box {
+  line-height: 24px;
+  width: 280px;
+  height: 44px;
+  border: 1px solid rgb(172, 172, 175);
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 6px;
+  display: flex;
+}
+.sidebar__search-box-icon {
   display: flex;
   align-items: center;
 }
-@media (width < 850px) {
-  .navigation__menu-group--btn {
-    display: none;
-  }
+.sidebar__search-box-icon img {
+  width: 20px;
+  height: 20px;
+}
+.sidebar__categories {
+  margin-top: 10px;
+  padding-block: 16px;
+  padding-left: 20px;
+}
+.sidebar__categories-opt1 {
+  color: rgb(56, 31, 209);
+}
+.sidebar__bottom {
+  margin-top: 32px;
+  background-color: rgb(243, 242, 252);
+  border-radius: 8px;
+  padding: 24px;
+}
+.sidebar__bottom-title {
+  font-family: "Armin_Grotesk";
+  font-size: 24px;
+}
+.sidebar__bottom-mid {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+.sidebar__bottom-box {
+  font-size: 16px;
+  width: 232px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgb(56, 31, 209);
+}
+.sidebar__bottom-box-text {
+  display: flex;
+  color: #fff;
+}
+
+.main {
+  display: grid;
+  padding-top: 64px;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
+  max-width: 1250px;
+  background-color: #fff;
+  margin-inline: auto;
+}
+
+.card-collection {
+  row-gap: 1.5rem;
+  display: grid;
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  grid-template-columns: subgrid;
+  grid-auto-rows: subgrid;
+}
+
+.title {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  grid-row: span 1;
+}
+
+.title-title {
+  display: flex;
+  font-size: 48px;
+  color: rgb(16, 40, 75);
+}
+
+.more {
+  display: flex;
+  color: rgb(56, 31, 209);
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.subtitle {
+  color: rgb(16, 40, 75);
+  font-family: "Armin_Grotesk_regular";
+  grid-column: 1/-1;
+  display: flex;
+  font-size: 20px;
 }
