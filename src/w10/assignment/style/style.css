@@ -234,6 +234,7 @@ body {
 }
 
 .bottom_info {
+  margin-inline: auto;
   max-width: 1250px;
   margin-inline: auto;
   margin-top: 50px;
