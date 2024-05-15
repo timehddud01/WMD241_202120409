@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @font-face {
   font-family: "Armin_Grotesk";
   src: url(../Fonts/Fontspring-DEMO-armingrotesk-black.otf) format("opentype");
@@ -48,7 +49,7 @@ body {
 }
 .navigation__menu-group--left {
   display: flex;
-  gap: 16px;
+  gap: 250px;
 }
 @media (width < 850px) {
   .navigation__menu-group--left {
@@ -60,12 +61,38 @@ body {
   gap: 16px;
 }
 
+.btn3 {
+  display: flex;
+  gap: 16px;
+}
+
+.btn1 {
+  padding-inline: 9.6px;
+}
+
 .gap {
-  margin-left: 109px;
+  display: flex;
+}
+
+.btn4 {
+  color: rgb(56, 31, 209);
+  margin-right: 16px;
 }
 
 .btn2 {
-  padding-inline: 20px;
+  width: 160px;
+  height: 32px;
+  background-color: rgb(56, 31, 209);
+  border-radius: 8px;
+  padding: 18px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.btn2_txt {
+  font-size: 14px;
+  display: flex;
+  color: #fff;
 }
 
 .sidebar {
@@ -150,7 +177,7 @@ body {
 }
 
 .card-collection {
-  row-gap: 1.5rem;
+  row-gap: 1rem;
   display: grid;
   grid-column: 2/-1;
   grid-row: 2/-1;
@@ -175,7 +202,9 @@ body {
   display: flex;
   color: rgb(56, 31, 209);
   font-size: 16px;
-  font-family: sans-serif;
+  font-weight: 700;
+  font-family: "Roboto Mono", sans-serif;
+  text-decoration: underline;
 }
 
 .subtitle {
@@ -184,4 +213,26 @@ body {
   grid-column: 1/-1;
   display: flex;
   font-size: 20px;
+}
+
+.bottom {
+  height: 730px;
+  margin-top: 96px;
+  padding-inline: 120px;
+  background-color: rgb(16, 40, 75);
+}
+
+.bottom_cat {
+  display: grid;
+  padding-top: 80px;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.bottom_info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }

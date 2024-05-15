@@ -7,6 +7,8 @@
   src: url(../Fonts/Fontspring-DEMO-armingrotesk-regular.otf) format("opentype");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 *,
 *::after,
 *::before {
@@ -49,7 +51,8 @@ body {
     }
     &--left {
       display: flex;
-      gap: 16px;
+      gap: 250px;
+
       @media (width < 850px) {
         & {
           display: none;
@@ -63,14 +66,37 @@ body {
   }
 }
 
+.btn3 {
+  display: flex;
+  gap: 16px;
+}
+.btn1 {
+  padding-inline: 9.6px;
+}
+
 .gap {
-  margin-left: 109px;
+  display: flex;
+}
+
+.btn4 {
+  color: rgb(56, 31, 209);
+  margin-right: 16px;
 }
 
 .btn2 {
-  padding-inline: 20px;
-}
-.btn3 {
+  width: 160px;
+  height: 32px;
+  background-color: rgb(56, 31, 209);
+  border-radius: 8px;
+  padding: 18px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  &_txt {
+    font-size: 14px;
+    display: flex;
+    color: #fff;
+  }
 }
 
 .sidebar {
@@ -161,13 +187,15 @@ body {
   margin-inline: auto;
 }
 .card-collection {
-  row-gap: 1.5rem;
+  //margin-left: 35px; //임시
+  row-gap: 1rem;
   display: grid;
   grid-column: 2/-1;
   grid-row: 2/-1;
   grid-template-columns: subgrid;
   grid-auto-rows: subgrid;
 }
+
 .title {
   grid-column: 1/-1;
   display: flex;
@@ -183,7 +211,9 @@ body {
   display: flex;
   color: rgb(56, 31, 209);
   font-size: 16px;
-  font-family: sans-serif;
+  font-weight: 700;
+  font-family: "Roboto Mono", sans-serif;
+  text-decoration: underline;
 }
 .subtitle {
   color: rgb(16, 40, 75);
@@ -191,4 +221,25 @@ body {
   grid-column: 1/-1;
   display: flex;
   font-size: 20px;
+}
+
+.bottom {
+  height: 730px;
+  margin-top: 96px;
+  padding-inline: 120px;
+  background-color: rgb(16, 40, 75);
+}
+
+.bottom_cat {
+  display: grid;
+  padding-top: 80px;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.bottom_info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }

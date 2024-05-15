@@ -15,6 +15,7 @@
 }
 
 .card {
+  margin-top: 20px;
   font-family: "Armin_Grotesk_regular", sans-serif;
   width: 261px;
   height: 235px;
@@ -71,13 +72,13 @@
 
 .card-color {
   &:nth-child(3) {
-    background-color: aqua;
+    background-color: rgb(246, 246, 235);
   }
   &:nth-child(4) {
-    background-color: aqua;
+    background-color: rgb(243, 242, 252);
   }
   &:nth-child(5) {
-    background-color: aqua;
+    background-color: rgb(246, 246, 235);
   }
 }
 
@@ -115,9 +116,39 @@
   border-radius: 8px;
 }
 
-.bottom {
-  height: 730px;
-  margin-top: 96px;
-  padding-inline: 24px;
-  background-color: rgb(16, 40, 75);
+// .bottom {
+//   height: 730px;
+//   margin-top: 96px;
+//   padding-inline: 24px;
+//   background-color: rgb(16, 40, 75);
+// }
+
+.card3_top {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card3_mid {
+  font-family: "Armin_Grotesk_regular", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.logos {
+  display: flex;
+  gap: 12px;
+}
+
+.logo1 {
+  width: 32px;
+  height: 32px;
+}
+
+.copy {
+  color: rgb(254, 219, 99);
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
