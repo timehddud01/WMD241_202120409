@@ -27,26 +27,5 @@ body {
   &__container {
     display: flex;
     justify-content: space-between;
-    margin-inline: auto;
-    align-items: center;
-  }
-  &__menu-group {
-    align-items: center;
-    display: flex;
-    &--right {
-      display: flex;
-      align-items: center;
-    }
-    &--left {
-      align-items: center;
-    }
-    &--btn {
-      gap: 1rem;
-      display: flex;
-      align-items: center;
-      @media (width<850px) {
-        display: none;
-      }
-    }
   }
 }
