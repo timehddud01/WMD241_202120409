@@ -231,6 +231,8 @@ body {
 }
 
 .bottom_cat {
+  max-width: 1250px;
+  margin-inline: auto;
   display: grid;
   padding-top: 80px;
   column-gap: 1.5rem;
@@ -239,6 +241,8 @@ body {
 }
 
 .bottom_info {
+  max-width: 1250px;
+  margin-inline: auto;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
