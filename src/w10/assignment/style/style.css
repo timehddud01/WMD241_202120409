@@ -168,7 +168,7 @@ body {
   display: grid;
   padding-top: 64px;
   -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
+       column-gap: 1.5rem;
   row-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   max-width: 1250px;
@@ -215,6 +215,14 @@ body {
   font-size: 20px;
 }
 
+.subtitle2 {
+  color: rgb(16, 40, 75);
+  font-family: "Armin_Grotesk_regular";
+  grid-column: 1/-1;
+  display: flex;
+  font-size: 20px;
+}
+
 .bottom {
   height: 730px;
   margin-top: 96px;
@@ -228,7 +236,7 @@ body {
   display: grid;
   padding-top: 80px;
   -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
+       column-gap: 1.5rem;
   row-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
 }
