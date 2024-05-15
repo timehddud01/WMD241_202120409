@@ -168,7 +168,7 @@ body {
   display: grid;
   padding-top: 64px;
   -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+  column-gap: 1.5rem;
   row-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
   max-width: 1250px;
@@ -228,14 +228,14 @@ body {
   display: grid;
   padding-top: 80px;
   -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
+  column-gap: 1.5rem;
   row-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
 }
 
 .bottom_info {
-  max-width: 1250px;
   margin-inline: auto;
+  max-width: 1250px;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
