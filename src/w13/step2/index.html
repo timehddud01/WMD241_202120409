@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: '#lottie-2',
+        mode: 'cursor',
+        actions: [
+          {
+            type: 'click',
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quo.
+        </h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus
+          consequatur nostrum libero non mollitia! Officiis, obcaecati totam.
+          Deserunt aut fugit voluptate nemo, quos enim provident laudantium
+          porro blanditiis, facilis praesentium repellendus placeat dolore nulla
+          amet ab? Culpa nulla impedit atque nesciunt aspernatur, tempore
+          consequuntur. Velit magnam impedit repudiandae similique et!
+        </p>
+
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="./assets/lottie_downloaded.json.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+          accusamus atque illum facilis quam iusto itaque aspernatur unde?
+          Eligendi corporis eaque illum esse exercitationem dolorem officiis
+          velit voluptatem unde debitis!
+        </p>
+        <dotlottie-player
+          id="lottie-2"
+          class="lottie"
+          src="./assets/lottie_downloaded.json.json"
+          background="transparent"
+          speed="1"
+        ></dotlottie-player>
+      </div>
+    </div>
+  </body>
+</html>

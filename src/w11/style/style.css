@@ -56,8 +56,11 @@ body {
 .btn--type-text:hover {
   background-color: unset;
   color: oklch(1 0 150);
-  animation-name: "rainbow";
-  animation-duration: 5000ms;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 4;
+  animation-name: rainbow;
+  animation-duration: 500ms;
 }
 
 @keyframes rainbow {
@@ -66,15 +69,16 @@ body {
     transform: translate(0rem, 0rem);
   }
   25% {
-    transform: translate(0rem, 0rem);
+    transform: translate(1rem, 0rem);
   }
   25% {
-    transform: translate(0rem, 0rem);
+    transform: translate(1rem, 1rem);
   }
   25% {
-    transform: translate(0rem, 0rem);
+    transform: translate(0rem, 1rem);
   }
   100% {
     background-color: oklch(0.5 0.2 240);
+    transform: translate(0rem, 0rem);
   }
 }
